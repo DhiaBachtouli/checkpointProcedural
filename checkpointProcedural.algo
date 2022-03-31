@@ -1,0 +1,82 @@
+PROCEDURE dot-product(v1:array-of-integer , v2:array-of-integer , var dp:float 
+BEGIN
+
+FOR i FROM 0 TO 2  DO
+    dp = dp +(v1[i]*v2[i])
+END_FOR
+
+END
+
+ALGORITHM algorithm produit scalaire
+VAR
+     v1:array-of-inetegr[3],
+     v2:array-of-inetegr[3]
+BEGIN
+    write('taper les 3 composants du 1 vecteur sous le tableau')
+    FOR i FROM 0 TO 2  DO
+        read(v1[i])
+    END_FOR
+
+    write('taper les 3 composants du 2 vecteur sous le tableau')
+    FOR i FROM 0 TO 2  DO
+        read(v2[i])
+    END_FOR
+
+
+dot-product(v1,v2,ps)
+
+
+IF (dp=0) THEN
+      write('les vecteurs sont ortho')
+ELSE
+     write('les vecteurs non ortho')
+END_IF
+
+
+END
+
+
+
+
+
+FUNCTION scalar-product(v1:arrayof-integer , v2:array-of-integer ):float 
+VAR dp:float
+BEGIN
+
+FOR i FROM 0 TO 2  DO
+    dp = dp +(v1[i]*v2[i])
+ENDFOR
+END
+
+
+
+
+
+ALGORITHM algorithm produit scalaire
+VAR
+     v1:array-of-inetegr[3],
+     v2:array-of-inetegr[3],
+     x:float
+BEGIN
+    write('donner les 3 composants du 1er vecteur sous le tableau')
+    FOR i FROM 0 TO 2  DO
+        read(v1[i])
+    END_FOR
+
+    write('donner les 3 composants du 2eme vecteur sous le tableau')
+    FOR i FROM 0 TO 2  DO
+        read(v2[i])
+    END_FOR
+
+
+sp:=scalar_prod(v1,v2)
+
+
+IF (sp=0) THEN
+      write('les vecteurs sont orthogonaux')
+ELSE
+     write('les vecteurs non pas orthogonaux')
+END_IF
+
+
+END
